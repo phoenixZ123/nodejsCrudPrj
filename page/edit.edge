@@ -1,0 +1,20 @@
+@layout('layout.master')
+@section('content')
+<a href="/" class="badge badge-success">Creations</a>
+<form action="/edit/{{data.id}}" method="post" enctype="multipart/form-data">
+    <div class="form-group ">
+        <label for="">Enter Name</label>
+        <input type="text" name="name" value='{{data.name}}' class="form-control ">
+    </div>
+     <div class="form-group">
+        <label for="">Image</label>
+        <input type="file" name="image" class="form-control">
+        <img src="{{'/'+data.image}}" alt="">
+
+    </div>
+    <input type="submit" value="Create" name="" id="" class="btn btn-danger btn-sm">
+</form>
+
+   
+
+@endsection  

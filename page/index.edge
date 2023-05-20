@@ -1,0 +1,52 @@
+@layout('layout.master')
+
+@section('content')
+<a href="/create" class="badge badge-dark">Create</a>
+<table class="table table-striped mb-0">
+    
+        <tr>
+        <th>name</th>
+        <th>image</th>
+        <th>option</th>
+    </tr>
+      @each(d in option)
+        <tr>
+        <td>
+
+           {{d.name}}
+        
+        </td>
+        <td >
+            <img style="width:50px;height:50px;
+             border-radius:20px;" src="{{d.image}}" alt="">
+        </td>
+        <td>
+            <a href="{{'/edit/'+d.id}}" class="badge badge-primary">Update</a>
+            <a href="/delete/{{d.id}}" class="badge badge-danger">Delete</a>
+           
+
+
+        </td>
+    </tr>
+     @endeach
+    
+    
+</table>
+@endsection
+{{--  <h1>Hello title this is</h1>
+..form handling..
+<form action="/" method="post" enctype="multipart/form-data">
+Username:<input type="text" name="user" id="">
+item:<input type="text" name="">
+image:<input type="file" name="image"/>
+<input type="submit" value="input">
+</form>
+{{user}}
+@endsection
+
+@section('body')
+<h2>this is next directive on database</h2>
+@each(u in vip_member)
+<li>name={{u.name}} item={{u.item}}</li>
+@endeach
+@endsection  --}}

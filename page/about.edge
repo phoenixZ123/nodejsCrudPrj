@@ -1,0 +1,9 @@
+@layout('layout.master')
+
+@section('body')
+<h2>this is next directive in about page</h2>
+@each(u in user)
+{{u.name}}
+@endeach
+
+@endsection
